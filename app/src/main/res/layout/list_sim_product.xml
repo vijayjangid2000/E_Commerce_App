@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="5dp"
+        android:padding="5dp"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/llView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="18dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    app:srcCompat="@drawable/call_icon_png"
+                    app:tint="@color/lightblue"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/forPricingOnly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tv_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableTint="@color/green"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        tools:text="999 777 000 1" />
+
+                    <TextView
+                        android:id="@+id/tv_customePrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:textSize="15sp"
+                        tools:text="$ 32"
+                        android:textColor="@color/black"
+                        android:alpha="0.7"/>
+
+                    <TextView
+                        android:id="@+id/tv_retailPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:textSize="12sp"
+                        tools:text="Retail Price: "
+                        android:alpha="0.7"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_detailsToHide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/btn_gridAddToCart"
+                        android:layout_width="95dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:paddingRight="25dp"
+                        android:paddingLeft="20dp"
+                        android:gravity="bottom"
+                        android:background="@color/transparent"
+                        android:drawablePadding="10dp"
+                        android:src="@drawable/ic_remove_from_cart"
+                        android:textColor="@color/lightblue"
+                        android:tint="@color/lightblue"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tv_addRemove"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Add"
+                        android:textColor="@color/lightblue"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:alpha="0.7"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/gape"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                android:background="#CDCDCD" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

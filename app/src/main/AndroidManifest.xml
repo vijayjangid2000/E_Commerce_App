@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.e.e_commerce_app">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".ApplicationClass"
+        android:allowBackup="true"
+        android:icon="@mipmap/myapp_icon_foreground"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/myapp_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".SimBuy.CartSim"
+            android:label="My Cart" />
+
+        <activity
+            android:name=".SimBuy.Products"
+            android:label="Products" />
+
+        <activity
+            android:name=".Activitys.Offer_Activity"
+            android:label="My Offers" />
+
+        <activity android:name=".Activitys.TrackingActivity" />
+
+        <activity android:name=".Activitys.TempActivity" />
+
+        <activity android:name=".Activitys.VerificationActivity" />
+        <activity
+            android:name=".Activitys.YourProfileActivity"
+            android:label="My Profile" />
+        <activity
+            android:name=".Activitys.CancelOrderActivity"
+            android:label="Cancel Order" />
+        <activity android:name=".Activitys.ForgetPasswordActivity" />
+        <activity
+            android:name=".Activitys.HelpActivity"
+            android:label="Get Help" />
+        <activity
+            android:name=".Activitys.WishList_Activity"
+            android:label="Wishlist" />
+        <activity android:name=".Activitys.OrderProcessActivity" />
+        <activity
+            android:name=".Activitys.ProductsActivity"
+            android:label="Products"
+            android:theme="@style/WithToolbar" />
+        <activity
+            android:name=".Activitys.RewardActivity"
+            android:label="Rewards" />
+        <activity
+            android:name=".Activitys.NotificationActivity"
+            android:label="Notifications" />
+        <activity
+            android:name=".Activitys.ViewOrderDetail"
+            android:label="Order Details" />
+        <activity
+            android:name=".Activitys.EditProfileActivity"
+            android:label="Edit Profile" />
+        <activity
+            android:name=".Activitys.MyCartActivity"
+            android:label="My Cart" />
+        <activity
+            android:name=".Activitys.ProfileActivity"
+            android:label="My Profile" />
+        <activity
+            android:name=".Activitys.MyOrdersActivity"
+            android:label="My Orders"
+            android:theme="@style/WithToolbar" />
+        <activity android:name=".Activitys.LoginActivity" />
+        <activity
+            android:name=".Activitys.ItemDescriptionActivity"
+            android:label="Item Details" />
+        <activity android:name=".Activitys.RegisterActivity" />
+        <activity
+            android:name=".Activitys.DashboardActivity"
+            android:theme="@style/WithToolbar" />
+
+        <activity
+            android:name=".Activitys.CategoriesActivity"
+            android:label="Categories" />
+
+        <activity android:name=".Activitys.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Add your API key here -->
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_wzwtTkFHQpxg2R" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>
